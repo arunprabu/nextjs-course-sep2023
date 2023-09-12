@@ -1,0 +1,176 @@
+
+
+Intro
+----
+  Next JS (50 Hours)
+
+Expectation
+=============
+  Skillset 
+  -------
+    HTML, CSS,
+    JS, ES2015 
+    TypeScript 
+    React 
+    
+  Hands-on 
+  -------
+    Explain => Coding => Demo => Try it out => Todos => Review 
+
+  Projects
+  -------
+    0. HTML, CSS Website
+    1. React App 
+        (Client Side Rendering App = SPA + Rest API)
+    2. Redux Toolkit App 
+        (Client Side Rendering App = SPA + Rest API)
+    3. Next JS App 
+        (Server Side Rendering App)
+
+    github.com 
+    -----------
+
+
+Softwares Reqd
+====
+  1. NodeJS v14.15+ or v16 or v18 (Not v20)
+      node -v 
+  2. VS Code 
+  3. Browser (Chrome, Edge, Opera, Brave, Safari, Firefox)
+
+
+
+Browser
+-----
+  1. HTML Renderer 
+  2. CSS Parser 
+  3. JS Engine 
+
+
+Front End 
+-----
+  HTML, CSS, JS 
+
+Back End 
+-----
+  Java / DotNet/ PHP / Perl / Python / Ruby / NodeJS
+
+Database 
+------
+  MySQL, PostgreSQL, MariaDB, Oracle, MongoDB
+
+
+Webapps 
+-----
+  1. Server Side Rendering (SSR) Apps / Traditional Webapps 
+      * Pages will Refresh / Reload 
+
+      Arch 
+      ----
+        Project: One code base [Front End Code + Back End Code + DB queries]
+
+        1 Server 
+          PORT: 8080
+
+        Response: HTML, CSS, JS, Data 
+
+          localhost:8080/index.php 
+            Response:  HTML, CSS, JS, Data 
+          
+          localhost:8080/about.php 
+            Response:  HTML, CSS, JS, Data 
+
+          localhost:8080/contact.php 
+            Response:  HTML, CSS, JS, Data 
+
+      Advantages
+      ============
+        1. Search Engine Friendly 
+        2. Initial Loading will Not take longer 
+
+      Disadvantages
+      ========
+        1. Server has to do the heavy-lifting 
+        2. Higher Bandwidth Consumption
+        3. Slower Webapps 
+        4. Not offering better UX 
+        5. Expensive 
+
+
+  2. Client Side Rendering (CSR) Apps / Modern Webapps  = SPA + Rest API
+      * Pages will NOT Refresh / Reload 
+
+      Arch
+      ----
+        Project #1: Front End App == Single Page App 
+          Codebase: HTML, CSS, JS 
+            
+        Project #2: Back End App  == RESTful API 
+          Codebase: PHP/DotNet with DB codes 
+
+        2 Servers 
+        ------
+          1 Server: For the Front End App 
+            port: 4200
+
+            localhost:4200/
+              Response:  HTML, CSS, JS,
+          
+            localhost:4200/about
+              Response:  HTML, CSS, JS 
+
+            localhost:4200/contact 
+              Response:  HTML, CSS, JS 
+
+          1 Server: For the Back End App 
+            port: 8081 
+            
+            localhost:8081/api/home
+              Response: Data (JSON)
+
+            localhost:8081/api/about
+              Response: Data (JSON)
+
+            localhost:8081/api/contact
+              Response: Data (JSON)
+
+      Advantages
+      =========
+        1. Server's workload is shared b/w two servers 
+        2. Lesser Bandwidth Consumption
+        3. Faster Webapps 
+        4. offering better UX 
+        5. Less Expensive
+
+      Disadvantages
+      =======
+        1. Not Search Engine Friendly 
+        2. Initial Loading will take longer 
+
+
+===================
+Single Page App
+===================
+  7 Characteristics
+  ---------------
+    1. Pages will not Refresh / Reload 
+    2. URL should change 
+    3. History should be maintained w/o page refresh 
+    4. Header and Footer should not be loaded again and again 
+    5. Main Section should show contextual updates 
+    6. Active Menu should be set 
+    7. Page Title should be changed 
+
+  Frameworks / Libraries 
+  ----------------------
+    #1 ReactJS (Library + Third party tools)
+    #2 Angular (Framework)
+    #3 VueJS (Framework)
+    #4 Svelte (Framework)
+
+========================
+
+  
+
+
+

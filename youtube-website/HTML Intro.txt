@@ -1,0 +1,16 @@
+3 Layers 
+=====
+  1. Structural Layer 
+      HTML 
+
+  2. Presentation Layer 
+      CSS 
+
+  3. Interaction Layer 
+      JS 
+
+
+2 Types of Elements
+---
+  1. Block Level 
+  2. Inline 
