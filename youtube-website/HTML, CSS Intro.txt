@@ -1,0 +1,108 @@
+3 Layers 
+=====
+  1. Structural Layer 
+      HTML
+
+  2. Presentation Layer 
+      CSS 
+
+  3. Interaction Layer 
+      JS 
+
+
+2 Types of Elements
+---
+  1. Block Level 
+        h1-h6, div, header, footer, aside, ul, li, nav, p 
+
+  2. Inline 
+        a, img, span, input, button
+
+
+=======
+CSS Intro 
+---
+  1. Inline Styles 
+      * coded with style attribute
+      * coded directly on the elements, so limited to using there alone
+      * not reusable in other elements 
+      * not reusable in other pages 
+
+  2. Internal Styles
+      * coded within <style> tag in html itself 
+      * not reusable in other pages 
+
+  3. External Styles 
+
+
+
+Syntax
+----
+  <selector> {
+    /* style definition */
+    property: value;
+  }
+
+Types of selectors 
+==============
+  1. Element Selector 
+  2. Class Selector
+  3. Id Selector
+  4. attribute Selector
+  5. ...
+  6. ...
+
+
+
+  
+
+Naming and Casing Conventions 
+========================
+
+Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * also Recommended for Interface in Java & TypeScript 
+
+        examples 
+        ---
+          class CarDetails {
+
+          }
+
+          interface Employee {
+
+          }
+
+    2. camelCase 
+        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for id's of html elements 
+
+        examples 
+        -----
+          var myCar = 'BMW';
+
+          function getCarInfo() {
+            //....
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names, assets in front end projects  
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect accepts
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case 
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;

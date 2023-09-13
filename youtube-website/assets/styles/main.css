@@ -1,0 +1,88 @@
+/* External Styles */
+/* Global Styles for the whole website */
+
+/* gloabal selector */
+/* TODO: Font embedding  */
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+/* element selector */
+header {
+  padding: 10px;
+  border-bottom: solid 1px gray;
+}
+
+/* class selector [RECOMMENDED]*/
+.search-input {
+  border: 1px solid gray;
+  border-radius: 16px;
+  padding: 6px 14px;
+  width: 400px;
+  vertical-align: top;
+  margin-top: 16px;
+}
+
+.signin-btn {
+  border: solid 1px gray;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  margin: 16px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 18px;
+}
+
+/* Id selector */
+#sidebar {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: beige;
+}
+
+#sidebar ul li {
+  list-style: none;
+}
+
+.videos-wrapper {
+  width: calc(100% - 20% - 5px);
+  display: inline-block;
+}
+
+.suggested-topics{
+  padding: 0;
+  text-align: center;
+}
+
+.suggested-topics li {
+  border: solid 1px gray;
+  display: inline;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.suggested-topics li a {
+  text-decoration: none;
+}
+
+.video-grids {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.video-grids .video-box {
+  border: solid 1px red;
+  margin: 6px;
+}
+
+
+
+footer {
+  text-align: center;
+}
+
+
+
+

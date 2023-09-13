@@ -156,7 +156,7 @@ Single Page App
     1. Pages will not Refresh / Reload 
     2. URL should change 
     3. History should be maintained w/o page refresh 
-    4. Header and Footer should not be loaded again and again 
+    4. Header and Footer should NOT be loaded again and again 
     5. Main Section should show contextual updates 
     6. Active Menu should be set 
     7. Page Title should be changed 

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Responsive UI -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube Website | Home Page</title>
     <link
@@ -11,20 +12,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Loading External Styles -->
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+
+    <!-- Internal styles -->
+    <style>
+      h2 {
+        color: darkblue;
+        font-size: 22px;
+      }
+    </style>
+
   </head>
   <body>
     <header>
-      <img
-        src="./assets/images/youtube-logo.png"
-        alt="YouTube Logo"
-        height="70"
-      />
-      <input type="text" placeholder="Search Videos" />
-      <a href="/">Signin</a>
+      <a href="/">
+        <img
+          src="./assets/images/youtube-logo.png"
+          alt="YouTube Logo"
+          height="60"
+        /></a>
+      
+      <input type="text"
+        placeholder="Search Videos" 
+        class="search-input"/>
+      <a href="/" class="signin-btn">Signin</a>
     </header>
 
     <main>
-      <aside>
+      <aside id="sidebar">
         <nav>
           <ul>
             <li><a href="/">Home</a></li>
@@ -34,19 +51,50 @@
           </ul>
         </nav>
       </aside>
+      
+      <section class="videos-wrapper">
+        <ul class="suggested-topics">
+          <li><a href="/">Football</a></li>
+          <li><a href="/">Cricket</a></li>
+          <li><a href="/">Music</a></li>
+          <li><a href="/">Sitecore</a></li>
+          <li><a href="/">Games</a></li>
+          <li><a href="/">Web Series</a></li>
+          <li><a href="/">Movies</a></li>
+          <li><a href="/">Ronaldo</a></li>
+          <li><a href="/">Kohli</a></li>
+          <li><a href="/">Asia Cup</a></li>
+        </ul>
 
-      <section>
-        <h1>Recommended Videos</h1>
+        <!-- inline style-->
+        <h1 style="color: red; background-color: yellow;">Recommended Videos</h1>
 
-        <!-- Video #1 -->
-        <div>
-          <img src="https://picsum.photos/536/354" alt="Video 1" />
-          <div>
-            <i class="fa-brands fa-squarespace"></i>
-            <h2>FIFA Worldcup Final highlights</h2>
-            <p>Squarespace</p>
-            <span>91M Views</span>
-            <span>1 month ago</span>
+        <div class="video-grids">
+          <!-- Video #1 -->
+          <div class="video-box">
+            <img src="https://picsum.photos/536/354"
+              alt="Video 1" height="190" />
+            <div>
+              <i class="fa-brands fa-squarespace"></i>
+              
+              <h2 >FIFA Worldcup Final highlights</h2>
+              <p>Squarespace</p>
+              <span>91M Views</span>
+              <span>1 month ago</span>
+            </div>
+          </div>
+
+          <!-- Video #2 -->
+          <div class="video-box">
+            <img src="https://picsum.photos/536/354" alt="Video 1" height="190" />
+            <div>
+              <i class="fa-brands fa-squarespace"></i>
+              
+              <h2 >FIFA Worldcup Final highlights</h2>
+              <p>Squarespace</p>
+              <span>91M Views</span>
+              <span>1 month ago</span>
+            </div>
           </div>
         </div>
       </section>
