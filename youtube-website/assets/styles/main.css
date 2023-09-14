@@ -2,9 +2,14 @@
 /* Global Styles for the whole website */
 
 /* gloabal selector */
-/* TODO: Font embedding  */
+/* Learn about embedding fonts */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf') format('truetype');
+}
+
 * {
-  font-family: Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 /* element selector */
@@ -77,12 +82,134 @@ header {
   margin: 6px;
 }
 
-
+.video-player {
+  width: 100%;
+}
 
 footer {
   text-align: center;
 }
 
+/* CSS Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body{
+    background-color: rgb(232, 255, 255);
+  }
 
+  .search-input {
+    width: 70%;
+  }
+
+  .suggested-topics li{
+    display: block;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .videos-wrapper {
+    width: 100%;
+  }
+
+  .video-grids {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body{
+    background-color: rgb(252, 252, 196);
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .suggested-topics li{
+    display: block;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .videos-wrapper {
+    width: 100%;
+  }
+
+  .video-grids {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body{
+    background-color: rgb(221, 255, 221);
+  }
+
+  #sidebar {
+    display: inline-block;
+  }
+
+  .videos-wrapper {
+    width: calc(100% - 20% - 5px);
+  }
+
+  .video-grids {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body{
+    background-color: rgb(248, 184, 184);
+  }
+
+  .suggested-topics li {
+    display: inline;
+  }
+  #sidebar {
+    display: inline-block;
+  }
+
+  .videos-wrapper {
+    width: calc(100% - 20% - 5px);
+  }
+
+  .video-grids {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body{
+    background-color: rgb(254, 212, 218);
+  }
+
+  #sidebar {
+    display: inline-block;
+  }
+
+  .videos-wrapper {
+    width: calc(100% - 20% - 5px);
+  }
+
+  .video-grids {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
 
 
