@@ -106,3 +106,30 @@ Casing Types
         examples
         ---
           const MAX_STUDENTS_PER_CLASS = 30;
+
+
+ECMAScript
+------ 
+  * ECMA International 
+  * Standard 
+  * Grammar 
+  * Implementations: JavaScript, JScript, ActionScript, QtScript, Google AppsScript
+
+  ES Before 2015
+  --------
+    * was not object oriented 
+    * no class -- no extends 
+    * no import and no export
+
+  ES after 2015 (from ES2015)
+  --------
+    * has become Object Oriented Programming Language 
+    * class, extends 
+    * import, export 
+
+JavaScript
+-----
+  * Interaction layer 
+
+Essential ES2015 or ES6 for React / NextJS Developers 
+------
