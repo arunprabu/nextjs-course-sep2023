@@ -1,0 +1,272 @@
+Browser
+----
+  1. HTML Renderer 
+  2. CSS Parser 
+  3. JS Engine 
+
+ECMAScript
+------ 
+  * ECMA International 
+  * Standard 
+  * Grammar 
+  * Implementations: JavaScript, JScript, ActionScript, QtScript, Google AppsScript
+
+  ES Before 2015
+  --------
+    * was not object oriented 
+    * no class -- no extends 
+    * no import and no export
+
+  ES after 2015 (from ES2015)
+  --------
+    * has become Object Oriented Programming Language 
+    * class, extends 
+    * import, export 
+
+JavaScript
+-----
+  * Interaction layer 
+
+Essential ES2015 or ES6 for React / NextJS Developers 
+------
+  var & variable hoisting [DONE]
+  let [DONE]
+  const [DONE]
+  
+  fn w/ default params [DONE]
+
+  destructuring [DONE]
+    * array 
+    * object 
+
+  rest, spread ops [DONE]
+  arrow fn [DONE]
+  template literal [DONE]
+  improvements in array [DONE]
+    * map operator 
+
+  promise [DONE]
+
+ES2017 
+---
+  async... await [DONE]
+
+Types of Languages in terms of Data Types 
+-------------
+  1. Strictly-Typed Languages / Statically-Typed
+      Examples: Java, C#, TS 
+
+      Syntax 
+      ----- 
+        int x = 10; 
+        x = 100; // valid 
+        x = "Arun"; // error 
+        x = true; // error 
+
+        String myName = "Arun"; // valid 
+        myName = 100; // error 
+
+
+  2. Loosely-Typed Languages / Dynamically-Typed 
+      Examples: JS, PHP, Python 
+      
+      Syntax in JS: 
+      -------
+        var x = 10; 
+        x = 100; // valid 
+        x = "Arun"; // valid 
+        x = true; // valid 
+        x = undefined; // valid 
+        x = null; // valid 
+        x = [];
+        x = {};
+        x = function() {
+
+        }
+
+
+Data Types in JS 
+------
+  Primitive DataTypes (7)
+    string, number, boolean, undefined, null, symbol (ES2015), big int (ES2017)
+
+  Non-Primitive DataTypes or Reference Types   
+    Object, Array, RegExp 
+
+
+TypeScript
+-----
+  TS = JS + Data Typing 
+  TS is a superset of JS 
+
+  Syntax
+  -------
+    1. Explicit DataTyping
+        var x: number = 10;
+        x = 100; // valid 
+        x = "Arun"; // error 
+
+    2. Implicit DataTyping a.k.a Type Inference 
+        var y = 20; // valid
+        y = 200; // valid 
+        y = "Arun"; // error
+
+  More Examples 
+  -----
+    var appName: string = "MyApp!";
+    var appName = "MyApp!"; 
+
+    var age: number = 20;
+    var age = 20; 
+
+    var isLoggedIn: boolean = false;
+    var isLoggedIn = false; 
+
+    var n: null = null; 
+    var u: undefined = undefined;
+
+    var colors1: string[] = ['red', 'green', 'blue'];
+    var colors2: Array<string> = ['red', 'green', 'blue'];  
+
+    var profile: {} = {
+      id: 1,
+      name: 'Steve Smith',
+      city: 'Sydney'
+    };
+
+
+
+Tuples 
+====
+  * Tuples are typed array 
+  let scores2: Array<number | string> = [ 40, 80, "50"]; // array of number or string 
+
+  // Tuple == data structure consisting of multiple parts 
+  let last5MatchScores: [number, number, string | number ] = [ 10 , 20, 30];
+
+
+
+=============================
+// enums are just restricted to hold numbers
+// enums usually prefered to have constants 
+enum ERROR_CODE {
+    INVALID_USERNAME = 1001,
+    INVALID_PASSWORD = 1002,
+    ACCOUNT_DISABLED // this will have value of 1003
+}
+
+console.log(ERROR_CODE.ACCOUNT_DISABLED);
+
+
+=============================
+
+Custom Type 
+-------------
+  * also called as Type Aliases 
+  
+  type Profile = {
+    name: string,
+    role: string,
+    team: string,
+    exp: number | string,
+    skills?: string[]
+  }
+
+  var profile: Profile = {
+    name: 'John',
+    role: 'Developer',
+    team: 'Citibank Project',
+    exp: "fresher"
+  }
+
+
+Interface 
+=======
+  interface IEmployee {
+    firstName: string,
+    lastName: string,
+    age: number
+  }
+
+  interface IContractEmployee extends IEmployee{
+      isContractor: boolean
+  }
+
+  let employee: IContractEmployee = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 30,
+      isContractor: true
+  }
+
+
+
+
+Functions 
+------------
+
+TODO: explore never type 
+  Refer: https://www.tutorialsteacher.com/typescript/typescript-never
+
+
+Softwares Required
+-----
+  1. NodeJs v 16+ 
+  2. VS code 
+  3. TypeScript Compiler 
+
+=====
+
+
+NodeJS Ecosystem 
+----
+  Package Developers 
+    Developing packages and publishing 
+
+  Server / Marketplace 
+    npmjs.com 
+
+  Client
+    npm 
+      * install packages 
+      * uninstall packages 
+      * update packages 
+
+NodeJs Ecosystem
+------
+  NPM 
+  ---
+    Node Package Manager 
+      * install packages 
+      * uninstall packages 
+      * update packages 
+
+
+  Dependencies
+  ---------
+    1. Project Dependencies 
+        * for the functionality to work 
+        * examples: bootstrap, dropzone, datatables.net, jquery, react 
+
+        npm i dropzone 
+        (or)
+        npm i dropzone --save 
+        (or)
+        npm i dropzone -S 
+      
+        "dependencies": {
+          "dropzone": "^6.0.0-beta.2"
+        }
+
+
+    2. Development Dependencies 
+      * for the webapp to be developed. 
+      * needed during the time development 
+
+      npm i webpack --save-dev 
+      (or)
+      npm i webpack -D 
+
+      "devDependencies": {
+        "webpack": "^5.88.2"
+      }

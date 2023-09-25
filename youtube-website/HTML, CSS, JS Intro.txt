@@ -76,12 +76,13 @@ Casing Types
           }
 
     2. camelCase 
-        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for variables, let, const, functions, methods in JS & TS 
         * Recommended for id's of html elements 
 
         examples 
         -----
           var myCar = 'BMW';
+          var employeeId = 1;
 
           function getCarInfo() {
             //....
@@ -89,7 +90,7 @@ Casing Types
     
     3. kebab-case
         * Recommended for URLs 
-        * Recommended for file names, folder names, assets in front end projects  
+        * Recommended for file names, folder names, project names, assets in front end projects  
         * Recommended for css classes 
         * okay for id's of html elements if your architect accepts
 
@@ -107,29 +108,3 @@ Casing Types
         ---
           const MAX_STUDENTS_PER_CLASS = 30;
 
-
-ECMAScript
------- 
-  * ECMA International 
-  * Standard 
-  * Grammar 
-  * Implementations: JavaScript, JScript, ActionScript, QtScript, Google AppsScript
-
-  ES Before 2015
-  --------
-    * was not object oriented 
-    * no class -- no extends 
-    * no import and no export
-
-  ES after 2015 (from ES2015)
-  --------
-    * has become Object Oriented Programming Language 
-    * class, extends 
-    * import, export 
-
-JavaScript
------
-  * Interaction layer 
-
-Essential ES2015 or ES6 for React / NextJS Developers 
-------

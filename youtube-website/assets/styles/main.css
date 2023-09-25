@@ -213,3 +213,43 @@ footer {
 }
 
 
+
+/* write a style for the following elements
+  
+  2. search input with padding 6px 14px, 1px of dotted border in red color
+  3. sign in button
+*/
+
+/* header with padding 10px, margin 20px, border-bottom 1px solid gray */
+header {
+  padding: 10px;
+  margin: 20px;
+  border-bottom: 1px solid gray;
+}
+
+/* search input with padding 6px 14px, 1px of dotted border in red color */
+.search-input {
+  padding: 6px 14px;
+  border: 1px dotted red;
+}
+/* write styles for  sign in button with hover and focus state */
+.signin-btn {
+  border: solid 1px gray;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  margin: 16px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 18px;
+} 
+.signin-btn :hover {
+  background-color: red;
+}
+
+.signin-btn :focus {
+  background-color: red;
+} 
+
+
+

@@ -1,0 +1,82 @@
+Thinking in React 
+---
+  Step 0: Identify the number of components 
+
+
+  Step 1: Break UI into component hierarchy 
+
+
+Components 
+-----
+  * reusable block of code 
+  
+  1. Functional Components 
+      1.1 Functional Components with Named Function 
+      1.2 Functional Components with Anonymous Function
+      1.3 Function Components with Arrow Function (RECOMMENDED)
+
+      * before react v16.8, Functional components were called as stateless
+      * these were also called as dumb components  
+      * after react v16.8, Functional components can also have state 
+
+  2. Class Components (NOT RECOMMENDED)
+      * before react v16.8, class components were called as stateful components 
+      * these were called as smart components / containers
+
+
+
+JSX
+----
+  * tags must be closed
+  * class attribute should become className 
+
+
+Concepts 
+-----
+  Deep Dive into components 
+    Data Binding 
+    Cross Component Communication 
+      1. Parent to Child Component Communication [DONE]
+          using Props 
+
+      2. Child to Parent Component Communication [TODO]
+          using Props and Event, Event Handler
+
+      3. Any to Any Component Communication
+          3.1 using Context API 
+          3.2 using Redux (third party framework)
+    
+    Props [DONE]
+    Managing State 
+    Events 
+    Conditionals
+    Lists & Keys 
+    Understanding Hooks
+    Routing 
+    REST API calls 
+  Build & Deployment 
+  
+Project Structure 
+--------------
+  src/
+    components/ 
+      Header/
+      Footer/
+      MenuList/
+    pages/
+      HomePage/
+      AboutPage/
+      ContactPage/
+
+    
+React Hooks 
+========
+  Rules of Hooks
+  -------
+  Hooks are JavaScript functions, but they impose two additional rules:
+    1. Only call Hooks at the top level. Don't call Hooks inside loops, conditions, or nested functions.
+    2. Only call Hooks from React function components. 
+      Don't call Hooks from regular JavaScript functions. 
+      (There is just one other valid place to call Hooks — your own custom Hooks.)
+
+  

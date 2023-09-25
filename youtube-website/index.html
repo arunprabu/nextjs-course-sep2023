@@ -12,6 +12,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- link bootstrap v5+  css from cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" 
+    integrity="sha512-+Ry6l6Xp6XUa2Yi4mY1xR0L9jv1EgRiQ0BxW4hP0d1b0KZq7D6Q6q5X8kZwBcD9z2W+6QhJ0mGp8YrRvxtDQ5A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Loading External Styles -->
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+
+    <!-- Internal styles -->
+    <style>
+      h2 {
+        color: darkblue;
+        font-size: 22px;
+      }
+    </style>
     <!-- Loading External Styles -->
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
@@ -136,9 +153,60 @@
       </section>
     </main>
 
+    <!-- footer -->
+    <!-- create footer element with 3 columns -->
     <footer>
-      <hr />
-      <p>Copyright 2023 | Arun</p>
+      <div class="column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Press</a></li>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Careers</a></li>
+          <li><a href="/">Advertising</a></li>
+          <li><a href="/">Talent Solutions</a></li>
+          <li><a href="/">Marketing Solutions</a></li>
+          <li><a href="/">Sales Solutions</a></li>
+          <li><a href="/">Small Business</a></li>
+          <li><a href="/">Community Guidelines</a></li>
+          <li><a href="/">Privacy & Terms</a></li>
+          <li><a href="/">Send Feedback</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Trending</a></li>
+          <li><a href="/">History</a></li>
+          <li><a href="/">Music</a></li>
+          <li><a href="/">Gaming</a></li>
+          <li><a href="/">News</a></li>
+          <li><a href="/">Movies</a></li>
+          <li><a href="/">Sports</a></li>
+          <li><a href="/">Fashion & Beauty</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Get in touch</h3>
+        <ul>
+          <li><a href="/">Contact us</a></li>
+          <li><a href="/">Locations</a></li>
+          <li><a href="/">Jobs</a></li>
+          <li><a href="/">FAQ</a></li>
+          <li><a href="/">Press</a></li>
+          <li><a href="/">Investor Relations</a></li>
+          <li><a href="/">Content Creators</a></li>
+          <li><a href="/">Advertise</a></li>
+          <li><a href="/">Developers</a></li>
+        </ul>
+      </div>
     </footer>
+
+    <!-- write a button tag with class name as scroll-top-btn -->
+    <button class="scroll-top-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  
   </body>
 </html>

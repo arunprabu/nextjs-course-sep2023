@@ -1,0 +1,17 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arun",
+  "license": "MIT",
+  "dependencies": {
+    "dropzone": "^6.0.0-beta.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2"
+  }
+}

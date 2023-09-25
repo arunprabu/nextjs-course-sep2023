@@ -170,6 +170,19 @@ Single Page App
 
 ========================
 
+Setup Dev Environment 
+------
+  1. NodeJs V 16+ 
+  2. VS Code Editor 
+  3. Browser 
+  4. try create-react-app tool 
+      Let's create a react project.
+        npx create-react-app youtube-react-app 
+        cd youtube-react-app 
+        code .
+        npm start 
+
+
   
 
 
