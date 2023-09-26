@@ -9,6 +9,7 @@ const RecommendedVideoList = () => {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       views: "1M",
       publishedOn: "today",
+      isInWatchlist: false,
     },
     {
       id: 2,
@@ -17,6 +18,7 @@ const RecommendedVideoList = () => {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       views: "1M",
       publishedOn: "yesterday",
+      isInWatchlist: false,
     },
     {
       id: 3,
@@ -25,6 +27,7 @@ const RecommendedVideoList = () => {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       views: "1.5M",
       publishedOn: "4 days ago",
+      isInWatchlist: false,
     },
     {
       id: 4,
@@ -33,8 +36,19 @@ const RecommendedVideoList = () => {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       views: "2M",
       publishedOn: "2 days ago",
+      isInWatchlist: false,
     },
   ]);
+
+  const handleManageWatchlist = (index) => {
+    console.log(index);
+    // updating the state immutably
+    const duplicateVideos = [...videos];
+    duplicateVideos[index].isInWatchlist =
+      !duplicateVideos[index].isInWatchlist;
+
+    setVideos(duplicateVideos);
+  }
 
   // // Conditional Rendering
   // if (videos.length === 0) {
@@ -58,8 +72,8 @@ const RecommendedVideoList = () => {
       )}
 
       {/* Let's do the looping -- a.k.a lists & keys */}
-      {videos.map((video) => {
-        console.log(video);
+      {videos.map((video, index) => {
+        // console.log(video);
         return (
           <div className="col-md-3" key={video.id}>
             <div className="card">
@@ -78,8 +92,14 @@ const RecommendedVideoList = () => {
                   Published {video.publishedOn}
                 </li>
                 <li className="list-group-item">
-                  <button type="button" className="btn btn-sm btn-success">
-                    Add to Watchlist
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-success"
+                    onClick={() => {
+                      handleManageWatchlist(index);
+                    }}
+                  >
+                    {video.isInWatchlist ? "In Watchlist" : "Add to Watchlist"}
                   </button>
                 </li>
               </ul>

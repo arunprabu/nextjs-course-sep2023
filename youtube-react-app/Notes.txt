@@ -79,4 +79,33 @@ React Hooks
       Don't call Hooks from regular JavaScript functions. 
       (There is just one other valid place to call Hooks — your own custom Hooks.)
 
-  
+Single Page App
+===================
+  7 Characteristics
+  ---------------
+    1. Pages will not Refresh / Reload [DONE]
+    2. URL should change [DONE]
+    3. History should be maintained w/o page refresh [DONE]
+    4. Header and Footer should NOT be loaded again and again [DONE]
+    5. Main Section should show contextual updates [DONE]
+    6. Active Menu should be set [TODO]
+    7. Page Title should be changed [TODO]
+
+Routing 
+-----
+  Step 0: Let's identify the menus, the matching url and components 
+
+    Home       -- http://localhost:3000/                  HomePage 
+    Users      -- http://localhost:3000/users             UsersPage
+    About      -- http://localhost:3000/about             AboutPage
+    Contact    -- http://localhost:3000/contact           ContactPage 
+
+  Step 1: Let's setup the urls in menulist component  
+
+  Step 2: Let's create the necessary components for the URLs 
+
+  Step 3: npm i react-router-dom 
+
+  Step 4: Config the routing in App comp 
+  Step 5: Check the app. Pages will still refresh. Let's fix it. 
+            in MenuList, replace a href with Link to
