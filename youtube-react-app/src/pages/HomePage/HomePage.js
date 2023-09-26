@@ -1,4 +1,5 @@
 import LatestVideoList from "./LatestVideoList/LatestVideoList";
+import RecommendedVideoList from "./RecommendedVideoList/RecommendedVideoList";
 import TrendingVideoList from "./TrendingVideoList/TrendingVideoList";
 
 const HomePage = () => {
@@ -13,7 +14,9 @@ const HomePage = () => {
       <h2>States & Events Demo</h2>
       <TrendingVideoList />
       <hr />
+      
       <h2>States, Events, Conditionals, Lists & Keys Demo</h2>
+      <RecommendedVideoList />
     </div>
   );
 }

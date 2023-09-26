@@ -79,6 +79,19 @@ const TrendingVideoList = () => {
           {videos[1].description}
         </TrendingVideo>
       </div>
+
+      <div className="col-md-3">
+        <TrendingVideo
+          id={videos[2].id}
+          title={videos[2].title}
+          thumbnailUrl={videos[2].thumbnailUrl}
+          views={videos[2].views}
+          publishedOn={videos[2].publishedOn}
+        >
+          {videos[2].description}
+        </TrendingVideo>
+      </div>
+
     </div>
   );
 };
