@@ -16,6 +16,11 @@ const MenuList = () => {
         </Link>
       </li>
       <li className="nav-item">
+        <Link className="nav-link" to="/todos">
+          Todos
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link className="nav-link" to="/about">
           About
         </Link>

@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import UsersPage from "./pages/UsersPage/UsersPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import TodosPage from './pages/TodosPage/TodosPage';
 
 /* App Component Definition */
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/todos" element={<TodosPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

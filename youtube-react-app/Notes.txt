@@ -47,13 +47,14 @@ Concepts
           3.2 using Redux (third party framework)
     
     Props [DONE]
-    Managing State 
-    Events 
-    Conditionals
-    Lists & Keys 
-    Understanding Hooks
-    Routing 
-    REST API calls 
+    Managing State [DONE]
+    Events [DONE]
+    Conditionals [DONE]
+    Lists & Keys [DONE]
+    Understanding Hooks 
+    Routing [DONE]
+    REST API calls [DONE]
+    Styling 
   Build & Deployment 
   
 Project Structure 
@@ -109,3 +110,4 @@ Routing
   Step 4: Config the routing in App comp 
   Step 5: Check the app. Pages will still refresh. Let's fix it. 
             in MenuList, replace a href with Link to
+
