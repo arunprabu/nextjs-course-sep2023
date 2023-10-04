@@ -11,19 +11,22 @@
   * can have a payload property (optional)
 */
 
+// CRUD App -- Create Read Update Delete
+// Create -- Add Todo
+// Read -- List Todos
+// Update -- Edit Todo
+// Delete -- Delete Todo
+
 const todoReducer = function(state = [], action){
   console.log("Inside TodoReducer");
-  // based on the action type must return state
-  switch(action.type){
+  // must return state;
+  switch(action.type) {
     case 'ADD_TODO':
-      return [ 
-        ...state, 
+      return [
+        ...state,
         action.payload
       ];
     
-    // case 'DELETE_TODO':
-    //   return state.filter(todo => todo.id !== action.payload.id);
-
     default:
       return state;
   }

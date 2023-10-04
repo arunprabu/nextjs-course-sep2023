@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import todoReducer from "../../reducers/todoReducer";
 
 const TodosPage = () => {
@@ -23,16 +23,12 @@ const TodosPage = () => {
     todoDispatch({
       type: "ADD_TODO",
       payload: {
-        id: new Date().getTime(),
+        id: new Date(),
         title: todoInput.current.value,
-        status: "incomplete",
-      },
+        status: 'incomplete'
+      }
     });
   };
-
-  // const handleDelete = (id) => {
-  //   console.log(id);
-  // }
 
   return (
     <div>
