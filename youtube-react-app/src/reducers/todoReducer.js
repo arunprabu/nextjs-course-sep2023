@@ -12,10 +12,10 @@
 */
 
 // CRUD App -- Create Read Update Delete
-// Create -- Add Todo
-// Read -- List Todos
-// Update -- Edit Todo
-// Delete -- Delete Todo
+// Create -- Add Todo [DONE]
+// Read -- List Todos [DONE]
+// Update -- Edit Todo [TODO]
+// Delete -- Delete Todo [DONE]
 
 const todoReducer = function(state = [], action){
   console.log("Inside TodoReducer");
@@ -26,7 +26,13 @@ const todoReducer = function(state = [], action){
         ...state,
         action.payload
       ];
+
+    case 'LIST_TODOS':
+      return action.payload;
     
+    case 'DELETE_TODO':
+      return state.filter((todo) => todo.id !== action.payload.id);
+
     default:
       return state;
   }

@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useRef } from "react";
 import todoReducer from "../../reducers/todoReducer";
+import axios from "axios";
 
 const TodosPage = () => {
   // Internal CSS -- NOT RECOMMENDED OFTEN
@@ -18,15 +19,43 @@ const TodosPage = () => {
   const [todoState, todoDispatch] = useReducer(todoReducer);
   console.log(todoState); // undefined;
 
+  // if you want to connect to the rest api -- try useEffect hook with axios
+  // try todoDispatch with action type being LIST_TODOS with 
+  // payload being data you received from rest api 
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+      .then((res) => {
+        console.log(res.data);
+        todoDispatch({
+          type: "LIST_TODOS",
+          payload: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const handleAddTodo = () => {
     console.log(todoInput.current.value);
     todoDispatch({
       type: "ADD_TODO",
       payload: {
-        id: new Date(),
+        id: new Date().getTime(),
         title: todoInput.current.value,
-        status: 'incomplete'
-      }
+        status: "incomplete",
+      },
+    });
+  };
+
+  const handleDelete = (id) => {
+    console.log(id);
+    todoDispatch({
+      type: "DELETE_TODO",
+      payload: {
+        id: id,
+      },
     });
   };
 
@@ -74,9 +103,9 @@ const TodosPage = () => {
                     {todo.title} | {todo.status}
                     <button
                       className="btn btn-danger btn-sm float-end"
-                      // onClick={() => {
-                      //   handleDelete(todo.id);
-                      // }}
+                      onClick={() => {
+                        handleDelete(todo.id);
+                      }}
                     >
                       Delete
                     </button>
