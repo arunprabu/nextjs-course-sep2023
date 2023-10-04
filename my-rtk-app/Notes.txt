@@ -1,0 +1,83 @@
+
+
+Integrating Redux in React Project 
+---
+  1. Classic Redux approach
+      React (library) + Redux (framework) + React-Redux (Official React bindings for Redux)
+      Redux Debugger 
+      Redux Logger 
+      Immer.JS 
+      Axios
+
+  2. Redux-toolkit (rtk) approach
+
+==========
+
+Why?
+What?
+how it works?
+
+========================
+State Management in React Apps
+
+  1. ReactJS + Flux [Not Maintained anymore]
+      * too much complexity 
+
+  2. ReactJS + Redux (2016 till today)    ==> a.k.a classic redux [LEARN SEPARATELY]
+      * complex
+      Middleware Integrations (choose anyone)
+        1. redux-thunk (38-40 steps)
+        2. redux-saga (46 steps)
+
+      Tools to be integrated 
+        * react-redux 
+        * @redux-devtools/extension
+        * immer.js 
+  
+  3. ReactJS + ContextAPI (Hooks)  (2019 till today) (Demo'd in youtube-react-app)
+      * Easier 
+
+  4. ReactJS + Redux-Toolkit (Redux, React-Redux, Redux-thunk)   => a.k.a modern redux 
+      * Easier 
+      Middleware Integrations 
+        1. redux-thunk (default one)
+        2. redux-saga 
+
+      Tools, by default integrated 
+        * react-redux 
+        * @redux-devtools/extension
+        * immer.js 
+
+  5. React JS + Zustand (LEARN SEPARATELY)
+
+----------
+How to create JS based react redux project? (classic redux)
+  npx create-react-app my-app --template redux 
+
+How to create TS based redux-toolkit project?
+  npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+
+=====
+3 Important Concepts of Redux
+----
+  1. Store 
+      the whole state for the app 
+
+  2. Action 
+      What happens in the app 
+
+  3. Reducer 
+      updates the store based on the action happened 
+
+  
+3 Principles of Redux
+-----
+  1. There should be single source of truth for the whole app . (i.e store)
+      (it should be an object)
+  2. The only way to update the store is by dispatching an action 
+      (that tells what happened in the app)
+  3. Reducer should update the store based on action happened
+      (and also based on previous and next state)
+
+============
+

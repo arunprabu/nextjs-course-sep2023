@@ -43,9 +43,9 @@ Concepts
           using Props and Event, Event Handler
 
       3. Any to Any Component Communication
-          3.1 using Context API 
-          3.2 using Redux (third party framework)
-    
+          3.1 using Context API [DONE]
+          3.2 using Redux / Flux / Zustand / MobX (third party framework)
+
     Props [DONE]
     Managing State [DONE]
     Events [DONE]
@@ -54,7 +54,8 @@ Concepts
     Understanding Hooks 
     Routing [DONE]
     REST API calls [DONE]
-    Styling 
+    Styling [DONE]
+    Context API [DONE]
   Build & Deployment 
   
 Project Structure 
@@ -110,4 +111,5 @@ Routing
   Step 4: Config the routing in App comp 
   Step 5: Check the app. Pages will still refresh. Let's fix it. 
             in MenuList, replace a href with Link to
+
 
