@@ -1,16 +1,23 @@
+import { useDispatch } from "react-redux";
+import { addUserAsync } from "./usersSlice";
+
 const AddUser = () => {
   // TODO: Learn more about react-hook-form
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // TODO: Read form data
+    // TODO: Read form data using react-hook-form
     // mock form data
     const dummyFormData = {
-      name: 'John',
-      email: 'j@k.com',
-      phone: 32456723546
-    }
+      name: "John",
+      email: "j@k.com",
+      phone: 32456723546,
+    };
     console.log(dummyFormData);
+
+    // call dispatch with addUserAsync(dummyFormData)
+    dispatch(addUserAsync(dummyFormData));
   }
 
   return (

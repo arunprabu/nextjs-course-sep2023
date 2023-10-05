@@ -24,6 +24,18 @@ export const fetchUsersAsync = createAsyncThunk(
   }
 )
 
+export const addUserAsync = createAsyncThunk(
+  'users/addUser', // action type prefix
+  async(addUserFormData) => {
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/users",
+      addUserFormData
+    );
+    console.log(response.data);
+    return response.data;
+  }
+)
+
 // What's the slice?
 /*
   A function that accepts an initial state,
@@ -66,7 +78,19 @@ export const usersSlice = createSlice({
         console.log(action);
         state.isLoading = false;
         state.isError = true;
-        state.status = 'Unable to fetch users. Try again later!'
+        state.status = "Unable to fetch users. Try again later!";
+      })
+      .addCase(addUserAsync.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addUserAsync.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.usersList = [...state.usersList, action.payload];
+      })
+      .addCase(addUserAsync.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.status = 'Unable to Save the data. Try again later.'
       });
   }
 });
