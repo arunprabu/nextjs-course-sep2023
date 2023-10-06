@@ -1,0 +1,66 @@
+Routing in React JS 
+-------
+  using react-router-dom 
+
+
+Routing in Next JS 
+----------
+  1. Page Router (Preferred)
+  2. App Router (Newer)
+
+
+localhost:3000
+  pages/index.tsx 
+
+localhost:3000/about
+  pages/about/index.tsx
+
+localhost:3000/contact-us
+  pages/contact-us/index.tsx
+
+localhost:3000/products/
+  pages/products/index.tsx 
+
+localhost:3000/products/1
+localhost:3000/products/2
+localhost:3000/products/45656
+  pages/products/[productId].tsx 
+
+localhost:3000/employees/
+  pages/employees/index.tsx 
+localhost:3000/employees/new
+  pages/employees/new.tsx 
+localhost:3000/employees/list
+  pages/employees/list.tsx 
+
+localhost:3000/posts/
+  pages/posts/index.tsx 
+
+localhost:3000/posts/1
+  pages/posts/[postId]/index.tsx 
+
+localhost:3000/posts/1/comments
+  pages/posts/[postId]/comments/index.tsx 
+  
+localhost:3000/posts/1/comments/1
+  pages/posts/[postId]/comments/[commentId].tsx 
+
+localhost:3000/posts/1/edit   [TODO]
+
+localhost:3000/archives/2023/10/06
+localhost:3000/archives/2022/05/31
+
+Page Router 
+----
+  Static URLs [DONE]
+  Dynamic URLs [DONE]
+  URL Params [DONE]
+  Query Params[DONE]
+
+  Nested URLS [DONE]
+  Slug with rest operator
+  Routing thru Program
+  Page Not Found 
+  Catch-All URLs
+  
+========
