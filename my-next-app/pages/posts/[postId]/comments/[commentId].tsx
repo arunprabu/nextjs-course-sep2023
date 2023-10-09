@@ -2,7 +2,7 @@ import { NextRouter, useRouter } from "next/router";
 
 export default function CommentById() {
   const router: NextRouter = useRouter();
-  console.log(router.query);
+  console.log(router.query); // reading url param -- postId and commentId
 
   return (
     <div>

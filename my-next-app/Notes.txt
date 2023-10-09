@@ -15,6 +15,9 @@ localhost:3000
 localhost:3000/about
   pages/about/index.tsx
 
+localhost:3000/careers
+  pages/careers.tsx 
+
 localhost:3000/contact-us
   pages/contact-us/index.tsx
 
@@ -24,7 +27,7 @@ localhost:3000/products/
 localhost:3000/products/1
 localhost:3000/products/2
 localhost:3000/products/45656
-  pages/products/[productId].tsx 
+  pages/products/[productId].tsx     --> productId -- is URL Param
 
 localhost:3000/employees/
   pages/employees/index.tsx 
@@ -58,9 +61,39 @@ Page Router
   Query Params[DONE]
 
   Nested URLS [DONE]
-  Slug with rest operator
-  Routing thru Program
+  Slug with rest operator [DONE]
+  Routing thru Program [DONE]
   Page Not Found 
-  Catch-All URLs
+  Catch-All URLs [DONE]
   
 ========
+
+
+What to do for SEO?
+ Page pre-rendering 
+
+ req => 
+  /products => 
+    (return pre-rendered page) => 
+      (then, hyderates with React code after loaded - so that app will become interactive)
+
+    
+------
+2 Types of Pre-rendering 
+  1. Static Generation: 
+      The HTML is generated at build time and will be reused on each request.
+
+  2. Server-side Rendering: 
+      The HTML is generated on each request.
+
+
+Static Generation
+--------------
+  * pre-generate a page with all the data prepared on the server side 
+  * all done during build time (npm run build)
+  * pages are prepared ahead of time
+  * can be cached by the server 
+
+  Example: Refer products.tsx 
+  
+

@@ -3,7 +3,7 @@ import NewEmployee from "./new";
 
 export default function Employees() {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col items-center">
       <h1>Employees Home Page</h1>
       <div>
         <NewEmployee />
@@ -13,5 +13,5 @@ export default function Employees() {
         <EmployeesList />
       </div>
     </div>
-  )
+  );
 }
