@@ -63,7 +63,7 @@ Page Router
   Nested URLS [DONE]
   Slug with rest operator [DONE]
   Routing thru Program [DONE]
-  Page Not Found 
+  Page Not Found [DONE]
   Catch-All URLs [DONE]
   
 ========
@@ -90,10 +90,12 @@ What to do for SEO?
 Static Generation
 --------------
   * pre-generate a page with all the data prepared on the server side 
-  * all done during build time (npm run build)
+  * all done during build time (npm run build or next build)
   * pages are prepared ahead of time
   * can be cached by the server 
 
   Example: Refer products.tsx 
   
+Let's build the project to see SSG html 
+  npm start 
 
