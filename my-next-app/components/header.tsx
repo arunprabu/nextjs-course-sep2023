@@ -63,7 +63,13 @@ export default function Header() {
                   href="/products"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
-                  Products
+                  Products (SSG)
+                </Link>
+                <Link
+                  href="/users"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >
+                  Users (SSR)
                 </Link>
                 <Link
                   href="/employees"
@@ -122,6 +128,12 @@ export default function Header() {
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Products
+          </a>
+          <a
+            href="#"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >
+            Users
           </a>
           <a
             href="#"
