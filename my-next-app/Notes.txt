@@ -99,3 +99,92 @@ Static Generation
 Let's build the project to see SSG html 
   npm start 
 
+==========
+
+Authentication
+-----
+  1. Session-Based 
+  2. Token-Based 
+
+  1. Session Based Authentication
+       email, password 
+       1. if valid 
+            session id would be created and SAVED in server 
+              server will send session id to the browser 
+                browser should store in cookies 
+                  (every subsequent req post-login)
+                    browser should send the session id in cookies to the server 
+                      (before sending further res to the client )
+                        server will compare the session id coming from browser with the one saved 
+                          if matches 
+                            then, res will be sent to the browser 
+                          else 
+                            login again  
+
+       2. else 
+            login again with valid credentials 
+
+
+      Disadvantages 
+      ---
+        Session ID should be maintained by the server 
+        
+
+  2. Token Based Authentication
+      email, password 
+       1. if valid 
+          JSON Web Token (JWT) would be generated using some encryption on the back end side 
+            server will not save it but will send JWT to the browser 
+              browser should store in cookies/localStorage/sessionStorage
+                (every subsequent req post-login)
+                  browser should send the JWT in req header to the server 
+                    (before sending further res to the client )
+                      server will validate the JWT coming from browser by decoding
+                        if valid
+                          then, res will be sent to the browser 
+                        else 
+                          login again  
+
+        2. else 
+            login again with valid credentials 
+
+---
+
+
+
+
+  Token Based 
+  -------
+    1. local strategy / provider  
+    -------
+      localhost:3000/signup 
+        email, password 
+        email should be saved in db -- NOT password
+        password should be encrypted and saved as salt and hash 
+        we should ask the user verify the email by sending email verification email 
+
+      localhost:3000/login 
+        email, password 
+        verify whether the user with such email is found in db 
+        if yes, then decrypt the password using salt 
+        regenerate the hash using the same salt 
+        then, if saved hash is matching with regenerated hash -- user is valid
+        then, send JWT Token 
+      
+      --- 
+      Browser should save the JWT token in either cookies or local storage or session storage
+
+      Every subsequent req to the server should carry the JWT token 
+      backend, you need to verify whether the JWT is valid or not 
+
+
+      localhost:3000/logout 
+        remove the saved token from browser 
+
+    2. third-party signin provider 
+
+
+
+
+
+
